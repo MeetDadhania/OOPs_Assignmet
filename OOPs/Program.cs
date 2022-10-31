@@ -25,7 +25,7 @@ namespace OOPs
             //Question 1 from Assignment 
             Shape firstShape = new Circle(7);
             firstShape.CalculateArea();
-            firstShape = new Reactangle(10, 10);
+            firstShape = new Rectangle(10, 10);
             firstShape.CalculateArea();
             firstShape = new Square(12);
             firstShape.CalculateArea();

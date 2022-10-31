@@ -57,10 +57,10 @@ namespace OOPs
     }
 
 
-    public class Reactangle : Shape
+    public class Rectangle : Shape
     {
 
-        public Reactangle(double width, double height) : base(width, height) { }
+        public Rectangle(double width, double height) : base(width, height) { }
 
         public override void CalculateArea()
         {
@@ -68,7 +68,7 @@ namespace OOPs
         }
     }
 
-    public class Square : Reactangle
+    public class Square : Rectangle
     {
 
         public Square(double height) : base(height,height) { }
