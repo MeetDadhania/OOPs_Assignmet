@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOPs
 {
+    //Creating class MealCourse
     public class MealCourse
     {
         private string mealCourseType;
 
+        //Get and Set Method
         public string MealType
         {
             get 
@@ -22,16 +24,28 @@ namespace OOPs
             }
         }
 
+        //constructor
+        public MealCourse() { }
+
+        //Parameterized constructor
+        public MealCourse(string mealCourseType)
+        {
+            this.mealCourseType = mealCourseType;
+        }
+
+        //Virtual method to Print
         public virtual void Print()
         {
             Console.WriteLine("MealCourseType is " + mealCourseType);
         }
     }
 
+    //inherit Dessert class from MealCourse
     public class Dessert : MealCourse
     {
         private string dessertType;
 
+        //get and set methods
         public string DessertType
         {
             get
@@ -44,17 +58,16 @@ namespace OOPs
             }  
         }
 
-        public Dessert()
-        {
-            base.MealType = "Dessert";
-        }
+        //Constructor
+        public Dessert() : base("Dessert") { }
 
-        public Dessert(string dessertType) 
+        //parameterized constructor
+        public Dessert(string dessertType) : base("Dessert")
         {
-            base.MealType = "Dessert";
             this.dessertType = dessertType;
         }
 
+        //Override the Print Method
         public override void Print()
         {
             base.Print();
@@ -65,6 +78,8 @@ namespace OOPs
     public class IceCream : Dessert
     {
         private string flavour;
+
+        //Get and Set Methods
         public string Flavour
         {
             get
@@ -77,17 +92,16 @@ namespace OOPs
             }
         }
 
-        public IceCream()
-        {
-            base.DessertType = "IceCream";
-        }
+        //constructor
+        public IceCream() : base("IceCream") { }
 
-        public IceCream(string flavour)
+        //parameterized constructor
+        public IceCream(string flavour) : base("IceCream")
         {
-            base.DessertType = "IceCream";
             this.flavour = flavour;
         }
 
+        //override Print Method
         public override void Print()
         {
             base.Print();
